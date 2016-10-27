@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "https://gems.ruby-china.org"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.0.0", ">= 5.0.0.1"
@@ -19,6 +19,7 @@ gem "coffee-rails", "~> 4.2"
 gem "jquery-rails"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.5"
+gem "webpack-rails"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -41,3 +42,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
+
+gem 'foreman'
