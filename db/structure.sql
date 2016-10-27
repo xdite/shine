@@ -176,6 +176,27 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: index_customers_on_lower_email; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_customers_on_lower_email ON customers USING btree (lower((email)::text));
+
+
+--
+-- Name: index_customers_on_lower_first_name_varchar_pattern_ops; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_customers_on_lower_first_name_varchar_pattern_ops ON customers USING btree (lower((first_name)::text) varchar_pattern_ops);
+
+
+--
+-- Name: index_customers_on_lower_last_name_varchar_pattern_ops; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_customers_on_lower_last_name_varchar_pattern_ops ON customers USING btree (lower((last_name)::text) varchar_pattern_ops);
+
+
+--
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -195,6 +216,6 @@ CREATE UNIQUE INDEX index_users_on_reset_password_token ON users USING btree (re
 
 SET search_path TO "$user", public;
 
-INSERT INTO schema_migrations (version) VALUES ('20161027073717'), ('20161027074845'), ('20161027075405');
+INSERT INTO schema_migrations (version) VALUES ('20161027073717'), ('20161027074845'), ('20161027075405'), ('20161027081003');
 
 
